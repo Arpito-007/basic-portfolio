@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jane Doe — Portfolio</title>
+  <meta name="description" content="Jane Doe — Frontend Developer. Clean portfolio with projects, skills and contact." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <div class="brand">
+        <a href="#top">JD<span class="dot">.</span></a>
+      </div>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" data-scroll>Home</a></li>
+          <li><a href="#about" data-scroll>About</a></li>
+          <li><a href="#projects" data-scroll>Projects</a></li>
+          <li><a href="#contact" data-scroll>Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Hi, I’m <span class="accent">Jane Doe</span></h1>
+          <p class="lead">Frontend developer building modern, responsive websites & interfaces. I help freelancers and small businesses look professional online.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#contact" data-scroll>Hire me</a>
+            <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+          </div>
+          <ul class="hero-meta">
+            <li><strong>Email</strong><span>jane@example.com</span></li>
+            <li><strong>Location</strong><span>Remote</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-photo">
+          <!-- Replace with real image -->
+          <img src="profile.jpg" alt="Jane Doe photograph" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I design and code fast, accessible websites. I specialize in HTML/CSS/JavaScript and build portfolio sites, landing pages, and small web apps.</p>
+
+        <div class="skills-grid">
+          <div class="skill">
+            <h4>HTML & CSS</h4>
+            <div class="skill-bar" data-value="95"><span></span></div>
+          </div>
+          <div class="skill">
+            <h4>JavaScript</h4>
+            <div class="skill-bar" data-value="80"><span></span></div>
+          </div>
+          <div class="skill">
+            <h4>Responsive Design</h4>
+            <div class="skill-bar" data-value="90"><span></span></div>
+          </div>
+          <div class="skill">
+            <h4>UI/UX</h4>
+            <div class="skill-bar" data-value="75"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Selected Projects</h2>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+          <button class="filter-btn" data-filter="app">App</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+          <!-- Project 1 -->
+          <article class="project-card" data-tags="web">
+            <img src="proj1.jpg" alt="Project 1 screenshot" />
+            <div class="proj-meta">
+              <h3>Portfolio Site Template</h3>
+              <p>One-page responsive portfolio built with HTML/CSS + JS lightbox.</p>
+              <div class="proj-actions">
+                <button class="open-btn" data-src="proj1-large.jpg">View</button>
+                <a class="link" href="#" target="_blank" rel="noopener">Visit</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-tags="app">
+            <img src="proj2.jpg" alt="Project 2 screenshot" />
+            <div class="proj-meta">
+              <h3>Weather App UI</h3>
+              <p>Responsive UI for a weather app, built with vanilla JS and API integration.</p>
+              <div class="proj-actions">
+                <button class="open-btn" data-src="proj2-large.jpg">View</button>
+                <a class="link" href="#" target="_blank" rel="noopener">Visit</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-tags="design">
+            <img src="proj3.jpg" alt="Project 3 screenshot" />
+            <div class="proj-meta">
+              <h3>Brand Identity Pack</h3>
+              <p>Brand visuals and landing mockup for a small coffee shop.</p>
+              <div class="proj-actions">
+                <button class="open-btn" data-src="proj3-large.jpg">View</button>
+                <a class="link" href="#" target="_blank" rel="noopener">Visit</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- add more project-card blocks as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Ready to start your project? Send me a message and I'll get back within 24 hours.</p>
+
+        <!-- Use Formspree or Netlify Forms. Example below uses Formspree placeholder.
+             Replace YOUR_FORMSPREE_ENDPOINT with your form endpoint (sign up at formspree.io).
+        -->
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form">
+          <div class="form-grid">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required />
+            </label>
+            <label class="full">
+              <span>Project Brief</span>
+              <textarea name="message" rows="6" required placeholder="Short description, deadline, budget..."></textarea>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Send Message</button>
+            <div id="formStatus" class="form-status" aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Jane Doe. Built with care.</p>
+        <p class="socials">
+          <a href="#" aria-label="LinkedIn">LinkedIn</a> ·
+          <a href="#" aria-label="GitHub">GitHub</a> ·
+          <a href="#" aria-label="Instagram">Instagram</a>
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lbClose" class="lb-close" aria-label="Close">✕</button>
+    <img id="lbImg" alt="Project large view" />
+    <div id="lbCaption" class="lb-caption"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
